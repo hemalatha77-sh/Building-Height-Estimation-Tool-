@@ -3,6 +3,7 @@ if (localStorage.getItem("loggedIn") !== "true") {
     window.location.href = "login.html";
 }
 </script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@ if (localStorage.getItem("loggedIn") !== "true") {
 <h1>UrbanHeight AI</h1>
 <button class="logout-btn" onclick="logout()">Logout</button>
 
-<h3 id="welcomeUser"></h3>
+<h3 id="welcome"></h3>
 
 <div class="container">
 
@@ -41,9 +42,7 @@ if (localStorage.getItem("loggedIn") !== "true") {
 </div>
 
 <button class="main-btn" onclick="generateResults()">Estimate Heights</button>
-
 <h2>Results Table</h2>
-
 <table id="table">
 <tr>
 <th>Building</th>
@@ -58,6 +57,12 @@ if (localStorage.getItem("loggedIn") !== "true") {
 
 <!-- JS LINK -->
 <script src="script.js"></script>
+<script>
+const username = localStorage.getItem("username");
 
+if (username) {
+    document.getElementById("welcomeText").innerText = "Welcome, " + username + " 👋";
+}
+</script>
 </body>
 </html>
