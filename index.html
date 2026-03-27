@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UrbanHeight AI</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>UrbanHeight AI</h1>
+<button class="logout-btn" onclick="logout()">Logout</button>
+
+<h3 id="welcomeUser"></h3>
+
+<div class="container">
+
+    <!-- SAR IMAGE -->
+    <div class="card">
+        <h3>SAR Image</h3>
+        <input type="file" id="sarInput">
+        <img id="sarPreview">
+    </div>
+
+    <!-- OPTICAL IMAGE -->
+    <div class="card">
+        <h3>Optical Image (Click buildings)</h3>
+        <input type="file" id="opticalInput">
+        <canvas id="canvas"></canvas>
+    </div>
+
+</div>
+
+<button class="main-btn" onclick="generateResults()">Estimate Heights</button>
+
+<h2>Results Table</h2>
+
+<table id="table">
+<tr>
+<th>Building</th>
+<th>Predicted Height</th>
+<th>Actual Height</th>
+<th>Error</th>
+</tr>
+</table>
+
+<h2>Graph</h2>
+<canvas id="chart"></canvas>
+
+<!-- JS LINK -->
+<script src="script.js"></script>
+
+</body>
+</html>

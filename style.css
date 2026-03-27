@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#141e30,#243b55);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: #00f5ff;
+    text-shadow: 0 0 15px #00f5ff;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 20px;
+    width: 320px;
+}
+
+canvas, img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+canvas {
+    width:100%;
+    max-width:300px;
+    height:auto;
+    display:block;
+    margin:10px auto;
+    border-radius:10px;
+    cursor:crosshair;
+}
+
+.main-btn {
+    margin: 20px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(45deg,#ff7e5f,#feb47b);
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    background: rgba(222, 152, 152, 0.1);
+}
+
+tr:hover td {
+    background: rgba(97, 181, 184, 0.2);
+}
+
+#chart {
+    width: 80%;
+    margin: 30px auto;
+}
