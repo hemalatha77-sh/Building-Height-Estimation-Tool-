@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - UrbanHeight AI</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Login</title>
 </head>
 
-<body class="center-body">
+<body>
 
-<div class="login-box">
-    <h2>UrbanHeight AI 🔐</h2>
+<h2>UrbanHeight AI 🔐</h2>
 
-    <input type="text" id="username" placeholder="Enter Username">
-    <input type="email" id="email" placeholder="Enter Email">
-
-    <button onclick="login()">Login</button>
-</div>
+<form onsubmit="login(event)">
+    <input type="text" id="username" placeholder="Enter Username" required>
+    <input type="email" id="email" placeholder="Enter Email" required>
+    <button type="submit">Login</button>
+</form>
 
 <script>
-function login() {
-    const username = document.getElementById("username").value;
+function login(event) {
+    event.preventDefault();
+
+    const user = document.getElementById("username").value;
     const email = document.getElementById("email").value;
 
-    // Simple validation
-    if(username !== "" && email !== "") {
-        // Save user info (optional)
-        localStorage.setItem("user", username);
+    // Allow any non-empty input
+    if (user.trim() !== "" && email.trim() !== "") {
+        localStorage.setItem("loggedIn", "true");
 
-        // Redirect
+        // (optional) store user info
+        localStorage.setItem("username", user);
+        localStorage.setItem("email", email);
+
         window.location.href = "index.html";
     } else {
         alert("Please enter Username and Email");
